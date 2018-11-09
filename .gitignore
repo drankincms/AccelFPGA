@@ -1,0 +1,8 @@
+*.root
+*.pyc
+__init__.py
+*.txt
+*.log
+*.pb
+*.json
+*.zip
