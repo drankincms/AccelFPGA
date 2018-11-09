@@ -10,7 +10,7 @@ source setup.sh
 ```
 
 To run, place the awsxclbin file (after uploading) in AccelFPGA/HLS4ML/python .
-Then, simply edit the kernel name to match your own and provide the number of inputs and outputs in hls4ml_test.py:
+Then, simply edit the kernel name to match your own and provide the number of inputs and outputs in AccelFPGA/HLS4ML/python/hls4ml_test.py:
 ```
 process.hls4mlProducer = cms.EDProducer('NNAccelProducer',
     JetTag = cms.InputTag('slimmedJetsAK8'),
@@ -22,5 +22,6 @@ process.hls4mlProducer = cms.EDProducer('NNAccelProducer',
 
 Then:
 ```
-cmsRun jetImageTest_mc_cfg.py
+cd AccelFPGA/HLS4ML/python
+cmsRun hls4ml_test.py
 ```

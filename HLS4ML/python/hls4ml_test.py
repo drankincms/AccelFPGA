@@ -28,7 +28,7 @@ process.source = cms.Source("PoolSource",
 ################### EDProducer ##############################
 process.hls4mlProducer = cms.EDProducer('NNAccelProducer',
     JetTag = cms.InputTag('slimmedJetsAK8'),
-    kernelName = cms.string("aws_hls4ml"),
+    kernelName = cms.string("aws_hls4ml"), #requires corresponding awsxclbin file in this directory
     inputSize = cms.uint32(40),
     outputSize = cms.uint32(5),
 )
