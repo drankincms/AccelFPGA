@@ -16,6 +16,8 @@ scram setup opencl
 
 # setup in scram
 # requires libhost.so to be placed in /home/centos/hostlib
+mkdir -p /home/centos/hostlib/
+cp libhost.so /home/centos/hostlib/
 # build libhost.so by modifying mk_exe in /home/centos/src/project_data/aws-fpga/SDAccel/examples/xilinx/utility/rules.mk with: 
 #        $(CXX) $(CXXFLAGS) $($(1)_CXXFLAGS) -fPIC -shared -o lib$$@.so $($(1)_SRCS) $($(1)_LDFLAGS) $(LDFLAGS)
 cat << 'EOF_TOOLFILE' > host.xml

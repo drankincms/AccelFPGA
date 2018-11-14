@@ -175,8 +175,10 @@ std::vector<unsigned int> NNAccelProducer::createInput(const edm::View<pat::Jet>
  
         }
 
+        unsigned int ctr = 0;
         while (outvec.size() != inputSize_) {
-                outvec.push_back((unsigned int)0);
+                outvec.push_back(ctr);
+                ctr++;
         }
 
         return outvec;
