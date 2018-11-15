@@ -46,7 +46,11 @@ cmsRun hls4ml_test.py
 ```
 
 Kernel development should follow the standard instructions here: https://github.com/aws/aws-fpga/tree/master/SDAccel
+
 The particular kernel contained here can be built using: https://github.com/drankincms/SDAccel_Examples
-And the libhost.so file should be created by adding
-```        $(CXX) $(CXXFLAGS) $($(1)_CXXFLAGS) -fPIC -shared -o lib$$@.so $($(1)_SRCS) $($(1)_LDFLAGS) $(LDFLAGS)```
+
+The libhost.so file should be created by adding
+```
+        $(CXX) $(CXXFLAGS) $($(1)_CXXFLAGS) -fPIC -shared -o lib$$@.so $($(1)_SRCS) $($(1)_LDFLAGS) $(LDFLAGS)
+```
 to `mk_exe` in /home/centos/src/project_data/aws-fpga/SDAccel/examples/xilinx/utility/rules.mk
