@@ -5,7 +5,7 @@ cat << 'EOF_TOOLFILE' > opencl.xml
   <tool name="OpenCL" version="1.2">
     <lib name="OpenCL"/>
     <client>
-      <environment name="OPENCL_BASE" default="/opt/Xilinx/SDx/2017.1.rte.4ddr/runtime"/>
+      <environment name="OPENCL_BASE" default="/opt/Xilinx/SDx/2017.1.rte.dyn/runtime"/>
       <environment name="LIBDIR" default="$OPENCL_BASE/lib/x86_64/"/>
     </client>
   </tool>
