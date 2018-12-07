@@ -12,7 +12,7 @@ cd $AWS_FPGA_REPO_DIR
 source sdaccel_setup.sh
 cd CMSSW_10_1_11/src
 sudo sh
-source /opt/Xilinx/SDx/2017.4.rte.4ddr/setup.sh
+source /opt/Xilinx/SDx/2017.4.rte.dyn/setup.sh
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 ```
@@ -24,7 +24,8 @@ cd AccelFPGA
 
 To setup libraries:
 ```
-source setup.sh
+chmod +x setup.sh
+./setup.sh
 scram b
 ```
 
